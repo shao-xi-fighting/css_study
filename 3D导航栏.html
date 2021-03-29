@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {
+           margin: 0;
+           padding: 0;
+           cursor: pointer;
+       }
+       ul {
+           margin: 100px;
+       }
+       ul li {
+           float: left;
+           margin: 0 5px;
+           list-style: none;
+           width: 120px;
+           height: 40px;
+           perspective: 400px;
+       }
+       .box {
+           transform-style: preserve-3d;
+           position: relative;
+           width: 100%;
+           height: 100%;
+           transition: all .4s;
+       }
+       .box:hover {
+           transform: rotateX(90deg);
+       }
+       .font,.bcg {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           line-height: 40px;
+           border-radius: 8px;
+           text-align: center
+       }
+       .font {
+           background-color: chartreuse;
+           z-index: 1;
+           transform: translateZ(17.5px);
+       }
+       .bcg {
+           background-color: cadetblue;
+           transform:  translateY(50%) rotateX(-90deg);
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+           <div class="box">
+            <div class="font">正面</div>
+            <div class="bcg">反面</div>
+           </div>
+        </li>
+        <li>
+            <div class="box">
+             <div class="font">正面</div>
+             <div class="bcg">反面</div>
+            </div>
+         </li>
+         <li>
+            <div class="box">
+             <div class="font">正面</div>
+             <div class="bcg">反面</div>
+            </div>
+         </li>
+         <li>
+            <div class="box">
+             <div class="font">正面</div>
+             <div class="bcg">反面</div>
+            </div>
+         </li>
+    </ul>
+</body>
+</html>
